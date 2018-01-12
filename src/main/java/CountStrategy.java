@@ -1,0 +1,3 @@
+interface CountStrategy {
+    boolean ride();
+}

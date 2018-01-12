@@ -1,4 +1,4 @@
-public class CountStrategyDays implements CountStrategy {
+class CountStrategyDays implements CountStrategy {
     private Date issued;
     private Date expires;
 

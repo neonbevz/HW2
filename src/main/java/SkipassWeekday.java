@@ -1,3 +1,3 @@
-public class SkipassWeekday extends Skipass {
+class SkipassWeekday extends Skipass {
 
 }

@@ -1,4 +1,4 @@
-public class CountStrategyRides implements CountStrategy {
+class CountStrategyRides implements CountStrategy {
     private int allowed;
     private int taken;
 

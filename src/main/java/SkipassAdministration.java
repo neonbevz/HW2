@@ -1,5 +1,4 @@
 import Enums.*;
-
 import java.util.ArrayList;
 
 class SkipassAdministration {
@@ -9,34 +8,43 @@ class SkipassAdministration {
         skipasses = new ArrayList<Skipass>();
     }
 
-    public boolean newWeekdaySkipass(String name, DaysDurations duration) {
+    public Skipass newWeekdaySkipass(String name, DaysDurations duration) {
         CountStrategy countStrategy = new CountStrategyDays(duration.getDays());
-        skipasses.add(new SkipassWeekday(name, countStrategy));
-        return true;
+        Skipass sp = new SkipassWeekday(name, countStrategy);
+        skipasses.add(sp);
+        return sp;
     }
 
-    public boolean newWeekdaySkipass(String name, RidesDurations duration) {
+    public Skipass newWeekdaySkipass(String name, RidesDurations duration) {
         CountStrategy countStrategy = new CountStrategyRides(duration.getRides());
         skipasses.add(new SkipassWeekday(name, countStrategy));
-        return true;
+        Skipass sp = new SkipassWeekday(name, countStrategy);
+        skipasses.add(sp);
+        return sp;
     }
 
-    public boolean newHolidaySkipass(String name, DaysDurations duration) {
+    public Skipass newHolidaySkipass(String name, DaysDurations duration) {
         CountStrategy countStrategy = new CountStrategyDays(duration.getDays());
         skipasses.add(new SkipassHoliday(name, countStrategy));
-        return true;
+        Skipass sp = new SkipassHoliday(name, countStrategy);
+        skipasses.add(sp);
+        return sp;
     }
 
-    public boolean newHolidaySkipass(String name, RidesDurations duration) {
+    public Skipass newHolidaySkipass(String name, RidesDurations duration) {
         CountStrategy countStrategy = new CountStrategyRides(duration.getRides());
         skipasses.add(new SkipassHoliday(name, countStrategy));
-        return true;
+        Skipass sp = new SkipassHoliday(name, countStrategy);
+        skipasses.add(sp);
+        return sp;
     }
 
-    public boolean newHolidaySkipass(String name, SeasonDurations duration) {
+    public Skipass newHolidaySkipass(String name, SeasonDurations duration) {
         CountStrategy countStrategy = new CountStrategySeason();
         skipasses.add(new SkipassHoliday(name, countStrategy));
-        return true;
+        Skipass sp = new SkipassHoliday(name, countStrategy);
+        skipasses.add(sp);
+        return sp;
     }
 
     public boolean tryRide(Skipass skipass) {

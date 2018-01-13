@@ -1,4 +1,3 @@
-
 class Date {
     private long value;
 

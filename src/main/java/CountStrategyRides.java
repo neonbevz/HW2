@@ -9,7 +9,7 @@ class CountStrategyRides implements CountStrategy {
 
     @Override
     public boolean ride() {
-        if (taken > allowed) {
+        if (taken >= allowed) {
             return false;
         }
         taken++;
